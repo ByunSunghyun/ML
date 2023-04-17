@@ -96,7 +96,8 @@ plt.ylabel('lift')
 
 plt.show()
 
-import plotly.express as px
-df = rules_ca
-fig = px.scatter_3d(df, x='support', y='confidence', z='lift', color= 'ant_con')
-fig.show()
+#3d로 그리기
+# import plotly.express as px
+# df = rules_ca
+# fig = px.scatter_3d(df, x='support', y='confidence', z='lift', color= 'ant_con')
+# fig.show()
