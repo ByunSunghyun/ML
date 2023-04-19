@@ -54,7 +54,7 @@ def plot_decision_regions(X, y, classifier, test_idx=None, resolution=0.02):
 
         plt.scatter(X_test[:, 0],
                     X_test[:, 1],
-                    c='',
+                    c='000000',
                     alpha=1.0,
                     edgecolor='black',
                     linewidths=1,
@@ -96,8 +96,7 @@ print('Accuracy: %.2f' % accuracy_score(Y_test,Y_pred))
 X_combined_std = np.vstack((X_train, X_test))
 Y_combined = np.hstack((Y_train, Y_test))
 Y_combined
-plot_decision_regions(X_combined_std, Y_combined,
-                      classifier=lr, test_idx=range(105, 150))
+plot_decision_regions(X_combined_std, Y_combined, classifier=lr, test_idx=range(105, 150))
 plt.title('Logistic Regression')
 plt.xlabel('Sepal Length')
 plt.ylabel('Petal Length')

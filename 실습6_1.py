@@ -142,9 +142,9 @@ x_test = x_test.astype('float32') / 255.
 y_train = keras.utils.to_categorical(y_train)
 y_val=keras.utils.to_categorical(y_val)
 y_test = keras.utils.to_categorical(y_test)
-print(math.ceil(len(x_train)/256))   
+#print(math.ceil(len(x_train)/256))   
 
 model=MultiLayer(learning_rate=0.1,batch_size=256,hidden_node=100)
 model.fit(x_train,y_train,epochs=40,x_val=x_val,y_val=y_val)
 
-model.score(x_test,y_test)
+print(model.score(x_test,y_test))
